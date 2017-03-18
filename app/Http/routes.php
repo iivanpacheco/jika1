@@ -87,10 +87,60 @@ Route::get('eliminar/{id_dispositivo}','dispotivoController@eliminar14');
 Route::get('Registrar_Tipo_Dispositivos', function () {
     return view('Registrar_Tipo_Dispositivos');
 });
+
+
+
+
+
+
 //Formulario Registro de Marcas de Dispositivos
 Route::get('Registrar_Marca', function () {
     return view('Registrar_Marca');
 });
+
+Route::post('Registrar_Marca','marcaController@registrar_marca');
+
+
+Route::get('consultar_marca','marcaController@consultar_marca');
+
+
+Route::get('editar/{id_marca}','marcaController@editar14');
+
+Route::post('Actualizar_marca/{id}','marcaController@actualizar');
+
+Route::get('eliminar/{id_marca}','marcaController@eliminar14');
+
+
+
+
+
+
+
+
+
+Route::get('Registrar_rol', function () {
+    return view('Registrar_rol');
+});
+
+Route::post('Registrar_rol','rolController@registrar_rol');
+
+
+Route::get('consultar_rol','rolController@consultar_rol');
+
+
+Route::get('editar/{id_rol}','rolController@editar14');
+
+Route::post('Actualizar_marca/{id}','rolController@actualizar');
+
+Route::get('eliminar/{id_rol}','rolController@eliminar14');
+
+
+
+
+
+
+
+
 //Formulario de los Registros
 Route::get('Registro', function () {
     return view('Registro');
