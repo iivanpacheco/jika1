@@ -6,7 +6,7 @@
 
 <body bgcolor="4A6591">
 
-<form id="Actualizar_tipo_dispositivo" name="Actualizar_tipo_dispositivo" method="POST" action="{{url('Actualizar_tipo_dispositivo', '$tipo_dispositivo->id ')}}">
+<form id="Actualizar_tipo_dispositivo" name="Actualizar_tipo_dispositivo" method="POST" action="{{url('Actualizar_tipo_dispositivo', $tipo_dispositivo->id)}}">
  {!! csrf_field() !!}
 <body>
 <table width="500" border="0" align="center">

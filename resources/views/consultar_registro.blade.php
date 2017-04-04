@@ -1,9 +1,10 @@
 @extends ('layout.master')
 @section ('content')
+<div id="Layer1" align="center">
 <ul>
 <body bgcolor="4A6591">
 <table width="200" border="1">
-  <tr>
+  <tr bgcolor="ccccc">
     <td width="150">id  </td>
     <td width="500">fecha_de_ingreso</td>
     <td width="100">hora_entrada</td>
@@ -13,7 +14,7 @@
   </tr>
 
 @foreach($registro as $historial)
- <tr>
+ <tr bgcolor="ccccc">
     <td>{{$historial->id}}</td>
     <td>{{$historial->fecha}}</td>
     <td>{{$historial->hora_entrada}}</td>

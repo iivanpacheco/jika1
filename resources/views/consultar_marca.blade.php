@@ -1,9 +1,10 @@
 @extends ('layout.master')
 @section ('content')
+<div id="Layer1" align="center">
 <ul>
 <body bgcolor="4A6591">
 <table width="200" border="1">
-  <tr>
+  <tr bgcolor="ccccc">
     <td width="150">id  </td>
     <td width="100">Marca</td>
     <td width="100">Descripcion</td>
@@ -13,7 +14,7 @@
 
 @foreach($marca as $mar)
 
- <tr>
+ <tr bgcolor="ccccc">
     <td>{{$mar->id}}</td>
     <td>{{$mar->marca}}</td>
     <td>{{$mar->descripcion}}</td>

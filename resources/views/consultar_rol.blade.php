@@ -1,19 +1,17 @@
 @extends ('layout.master')
 @section ('content')
-
+<div id="Layer1" align="center">
 <ul>
 <body bgcolor="4A6591">
-<table width="200" border="1">
-  <tr>
-    <td width="150">id  </td>
-    <td width="500">rol</td>
-    <td width="100">descripcion</td>
-    <td width="100">Opciones</td>
-    
+<table width="" border="1">
+  <tr bgcolor="ccccc">
+    <td width="50">id  </td>
+    <td width="200">rol</td>
+    <td width="200">descripcion</td>
+    <td width="100">Opciones</td>    
   </tr>
-
 @foreach($rol as $roles)
- <tr>
+ <tr bgcolor="ccccc">
     <td>{{$roles->id}}</td>
     <td>{{$roles->rol}}</td>
     <td>{{$roles->descripcion}}</td>
@@ -24,3 +22,7 @@
 @endforeach
 </ul>
 @endsection
+</table>
+</body>
+</ul>
+</div>

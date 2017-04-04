@@ -58,8 +58,10 @@ class dispotivoController extends Controller
     {
 
       // Conseguimos el objeto
-    $dispositivos=dispositivo::findorfail($id_dispositivo)->first();
-         $dispositivos->delete();
+        $dispositivos=dispositivo::findorfail($id_dispositivo);
+        $data = Request ()->all();
+        $dispositivos->fill ($data)->delete();
+        return redirect ()->to ('consultar_dispositivo');
 
     }
 

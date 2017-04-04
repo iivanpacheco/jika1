@@ -97,9 +97,10 @@ class jika extends Controller
     {
 
       // Conseguimos el objeto
-    $usuario=usuario::findorfail($id)->first();
-         $usuario->delete();
-
+  $usuario=usuario::findorfail($id);
+        $data = Request ()->all();
+        $usuario->fill ($data)->delete();
+        return redirect ()->to ('consultar_usuario');
     }
 
 }

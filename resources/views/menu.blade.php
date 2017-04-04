@@ -28,10 +28,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><table width="128" border="0">
+      <a class="navbar-brand" href="#"> <table width="128" border="0">
         <tr>
-          <td width="20"><img src="Inicio.png" width="40" height="20" /></td>
-          <td width="70">Inicio </td>
+          <td width="20"> <img src="Inicio.png" width="40" height="20" /></td>
+          <td width="70"> <span class="label label-primary">Inicio</span> </td>
         </tr>
       </table></a>
     </div>
@@ -66,7 +66,7 @@
         <button type="submit" class="btn btn-default">buscar</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="#"> <span class="label label-default"> Link </span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">

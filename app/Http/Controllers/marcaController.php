@@ -88,8 +88,10 @@ class marcaController extends Controller
     {
 
       // Conseguimos el objeto
-    $marca=marca::findorfail($id)->first();
-         $marca->delete();
+    $marca=marca::findorfail($id);
+        $data = Request ()->all();
+        $marca->fill ($data)->delete();
+        return redirect ()->to ('consultar_marca');
 
     }
 

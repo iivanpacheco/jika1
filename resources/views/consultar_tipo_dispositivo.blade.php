@@ -1,12 +1,10 @@
-
-
 @extends ('layout.master')
 @section ('content')
-
+<div id="Layer1" align="center">
 <ul>
 <body bgcolor="4A6591">
 <table width="200" border="1">
-  <tr>
+  <tr bgcolor="ccccc">
     <td width="150">id  </td>
     <td width="500">tipo_dispositivo</td>
     <td width="100">descripcion</td>
@@ -15,7 +13,7 @@
   </tr>
 
 @foreach($tipo_dispositivo as $tipo)
- <tr>
+ <tr bgcolor="ccccc">
     <td>{{$tipo->id}}</td>
     <td>{{$tipo->tipo_dispositivo}}</td>
     <td>{{$tipo->descripcion}}</td>

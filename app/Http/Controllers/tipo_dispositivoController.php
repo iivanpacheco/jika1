@@ -87,8 +87,10 @@ class tipo_dispositivoController extends Controller
     {
 
       // Conseguimos el objeto
-    $tipo_dispositivo=tipo_dispositivo::findorfail($id)->first();
-    $tipo_dispositivo->delete();
+        $tipo_dispositivo=tipo_dispositivo::findorfail($id);
+        $data = Request ()->all();
+        $tipo_dispositivo->fill ($data)->delete();
+        return redirect ()->to ('consultar_tipo_dispositivo');
 
     }
 

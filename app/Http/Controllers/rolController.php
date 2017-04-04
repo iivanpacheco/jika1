@@ -87,8 +87,9 @@ class rolController extends Controller
     {
 
       // Conseguimos el objeto
-    $rol=rol::findorfail($id)->first();
-         $rol->delete();
-
+    $rol=rol::findorfail($id);
+        $data = Request ()->all();
+        $rol->fill ($data)->delete();
+        return redirect ()->to ('consultar_rol');
     }
 }

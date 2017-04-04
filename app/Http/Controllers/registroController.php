@@ -58,9 +58,10 @@ class registroController extends Controller
     {
 
       // Conseguimos el objeto
-    $marca=marca::findorfail($id)->first();
-         $marca->delete();
-         return redirect ()->to ('consultar_registro');
+    $registro=registro::findorfail($id);
+        $data = Request ()->all();
+        $registro->fill ($data)->delete();
+        return redirect ()->to ('consultar_registro');
 
     }
 }

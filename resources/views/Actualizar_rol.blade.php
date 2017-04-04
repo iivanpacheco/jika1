@@ -8,7 +8,7 @@
 
 <body bgcolor="4A6591">
 
-<form id="Actualizar_rol" name="Actualizar_rol" method="POST" action="{{url('Actualizar_rol','$rol->id')}}">
+<form id="Actualizar_rol" name="Actualizar_rol" method="POST" action="{{url('Actualizar_rol',$rol->id)}}">
   <div align="center">
     <blockquote>
       <blockquote>

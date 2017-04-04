@@ -1,5 +1,6 @@
 @extends ('layout.master')
 @section ('content')
+<div id="Layer1" align="center">
 <ul>
 <body bgcolor="4A6591">
 <table width="200" border="1">

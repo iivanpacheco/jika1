@@ -4,53 +4,77 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Inicio de Sesion</title>
 <link rel="stylesheet" type="text/css" href="Estilos.css" />
+<style type="text/css">
+<!--
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: none;
+}
+.Estilo4 {color: #ccccc}
+body {
+  background-color: #4a6591;
+}
+-->
+</style>
 </head>
 
-<body>
-<table width="900" height="527" border="0" align="center">
+<body background="ccccc">
+<table width="900" height="538" border="0" align="center" bordercolor="#4A6591">
   <tr>
-    <td width="900" bgcolor="#CCCCCC"><form id="form1" name="form1" method="post" action="">
-      <table width="900" height="463" border="0">
-        <tr>
-          <td width="900"><div align="center">Nombre de Usuario: </div></td>
-        </tr>
-        <tr>
-          <td height="436"><label>
-            <div align="center">
-              <input name="nombre" type="text" id="nombre" size="50" />
-              <br />
-              </div>
-          </label>
-            <table width="900" border="0">
-              <tr>
-                <td><div align="center">Contrase&ntilde;a:</div></td>
-              </tr>
-              <tr>
-                <td><label>
-                  <div align="center">
-                    <input name="contrase&ntilde;a" type="text" id="contrase&ntilde;a" size="50" />
-                    </div>
-                </label></td>
-              </tr>
-            </table>
-            <table width="900" border="0">
-              <tr>
-                <td><div align="center">&iquest;olvidaste tu contrase&ntilde;a?</div></td>
-              </tr>
-            </table>
-            <p align="center"><a href="Registrarse.html" target="_parent">&iquest;No tienes una cuenta?, Reg&iacute;strate</a> </p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p></td>
-        </tr>
-      </table>
-        </form>
-    </td>
+    <td width="900" bgcolor="#4A6591"><form id="form1" name="form1" method="post" action="">
+      <div align="center"><img src="banner.png" width="541" height="152" /></div>
+    </form>    </td>
+  </tr>
+  <tr>
+    <td height="378" bgcolor="#4A6591"><table width="522" height="365" border="0" align="center" bordercolor="#4A6591" bgcolor="#CCCCCC">
+      <tr>
+        <td width="516" height="361"><form id="inicio_sesion" name="inicio_sesion" method="post" action="">
+          <table width="522" border="0">
+            <tr>
+              <td><div align="center">Nombre Usuario: </div></td>
+            </tr>
+            <tr>
+              <td><label></label>
+              <div align="center"><div align="center">
+                  <input type="text" name="usuario" width="600" />
+                  </div></div></td>
+            </tr>
+            <tr>
+              <td><div align="center">Contrase&ntilde;a:</div></td>
+            </tr>
+            <tr>
+          <td><div align="center"><div align="center">
+                  <input type="password" name="usuario" width="600" />
+                  </div></div></td>
+            </tr>
+            <tr>
+              <td><div align="center">&iquest;olvidaste tu contrase&ntilde;a?</div></td>
+            </tr>
+            <tr>
+              <td><div align="center">
+                <label>
+                <input name="ingresar" type="submit" id="ingresar" value="ingresar" />
+                </label>
+              </div></td>
+            </tr>
+            <tr>
+              <td><div align="center">&iquest;No tienes una cuenta?&nbsp;<a href="Usuarios2" target="_parent">Reg&iacute;strate</a></div></td>
+            </tr>
+          </table>
+                        </form>
+        </td>
+      </tr>
+      
+    </table>
+    <div align="center"></div></td>
   </tr>
 </table>
 </body>
