@@ -1,4 +1,10 @@
 <?php
+/** @file : dispositivoController.php
+* @brief : Controller donde se llevaran acabo todos los metodos utilizados para la tabla de dispositivos.
+* @date : 25/03/2017
+* @author : Ivan Pacheco
+* @version : 1
+*/
 
 namespace App\Http\Controllers;
 
@@ -18,34 +24,46 @@ class dispotivoController extends Controller
      */
    public function registrar_dispositivo()
     {
-       $serial =Request()->get ('serial');
-        echo "el serial de su dispositivo es:--". $serial; echo "<br>";
-        $descripcion =Request()->get ('descripcion');
-        echo "Descripcion de su dispositivo". $descripcion; echo "<br/>";
-        $codigo_barra =Request()->get ('codigo_barra');
-        $marca =Request()->get ('marca');
-        $tipo_dispositivo =Request()->get ('tipo_dispositivo');
-
-          
-       
+      /** 
+      
+      *   @brief : Metodos para ingresar Dispositivos en la base de datos.
+        * @return :Vista donde nos mostrara todos lo dispositivos.
+        */
+   
         $data =Request()->all();
         dispositivo::create($data);
+        return redirect ()->to ('consultar_dispositivo');
 
     }
 
      public function consultar_dispositivo()
     {
+
+      /** 
+      *   @brief : Metodos para consultar todos los  Dispositivos en la base de datos.
+        * @return :Vista donde nos mostrara todos lo dispositivos.
+        */
         $dispositivos=dispositivo::all();
         return view ('consultar_dispositivo',compact('dispositivos'));
     }
 
     public function editar14($id_dispositivo){
+      /** 
+      *   @param : $id_dispositivo 
+      *   @brief : Metodos para editar Dispositivos en la base de datos.
+        * @return :Vista donde nos mostrara un formulario con todos los datos del dispoditivo a editar.
+        */
 
         $dispositivos=dispositivo::findorfail($id_dispositivo);
         return view ('Actualizar_dispositivo',compact('dispositivos'));
     }
 
     public function actualizar($id_dispositivo){
+       /** 
+      *   @param : $id_dispositivo 
+      *   @brief : Metodos utilizado para actualizar Dispositivos en la base de datos.
+        * @return :Vista donde nos mostrara todos lo dispositivos.
+        */
 
         $dispositivos=dispositivo::findorfail($id_dispositivo);
         $data = Request ()->all();
@@ -56,6 +74,11 @@ class dispotivoController extends Controller
     public function eliminar14($id_dispositivo)
 
     {
+      /** 
+      *   @param : $id_dispositivo 
+      *   @brief : Metodos utilizado para eliminar Dispositivos en la base de datos.
+        * @return :Vista donde nos mostrara todos lo dispositivos.
+        */
 
       // Conseguimos el objeto
         $dispositivos=dispositivo::findorfail($id_dispositivo);

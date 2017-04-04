@@ -1,4 +1,10 @@
-@extends('layout/master')
+<?php/** @file : Actualizar_rol.blade.php
+* @brief : Cotiene el formulario para actualizar el rol.
+* @author : Ivan Pacheco
+* @version : 1
+* @date : 28 marzo del 2017 
+*/
+?>@extends('layout/master')
 @section('content')
 <!DOCTYPE html>
 <html>

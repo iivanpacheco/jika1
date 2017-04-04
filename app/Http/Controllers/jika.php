@@ -1,5 +1,12 @@
 <?php
 
+/** @file : jika.php
+* @brief : Controller donde se llevaran acabo todos los metodos utilizados para la tabla de usuarios
+* @date : 25/03/2017
+* @author : Ivan Pacheco
+* @version : 1
+*/
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -19,30 +26,25 @@ class jika extends Controller
     public function registrar_usuario()
        
       {
-      $nombre =Request()->get ('nombre');
-        echo "el nombre del aprendiz es:--". $nombre;
-         $apellido =Request()->get ('apellido');
-        echo  $apellido; echo "<br/>";
-        $celular =Request()->get ('celular');
-        echo "Numero de celular del aprendiz es--". $celular; echo "<br/>";
-        $genero =Request()->get ('genero');
-        echo "El genero del aprendiz es--". $genero; echo "<br/>";
-        $correo =Request()->get ('correo');
-      echo "El corre del aprendiz es--". $correo; echo "<br/>";
-        $fecha_nacimiento =Request()->get ('fecha_nacimiento');
-        echo "Fecha de nacimineto del aprendiz--". $fecha_nacimiento; echo "<br/>"; 
-          $fk_id_rol =Request()->get ('rol');
-        echo "El rol es--". $fk_id_rol; echo "<br/>";   
-          
+        /** 
+      *   @brief : Metodos para ingresar usuarios en la base de datos.
+        * @return :Vista donde nos mostrara todos lo usuarios.
+        */
+      
        
         $data =Request()->all();
         usuario::create($data);
+        return redirect ()->to ('inicio');
 
     }    
 
     
      public function consultar()
     {
+        /** 
+      *   @brief : Metodos para consultar todos los  usuarios en la base de datos.
+        * @return :Vista donde nos mostrara todos lo usuarios.
+        */
         $usuario=usuario::all();
         return view ('consultar_usuario',compact('usuario'));
     }
@@ -79,12 +81,22 @@ class jika extends Controller
     }*/
 
     public function editar14($id){
+        /** 
+      *   @param : $id
+      *   @brief : Metodos para editar usuarios en la base de datos.
+        * @return :Vista donde nos mostrara un formulario con todos los datos del usuarios a editar.
+        */
 
         $usuario=usuario::findorfail($id);
         return view ('Actualizar_usuario',compact('usuario'));
     }
 
     public function actualizar($id){
+        /** 
+      *   @param : $id
+      *   @brief : Metodos utilizado para actualizar usuarios en la base de datos.
+        * @return :Vista donde nos mostrara todos lo usuarios.
+        */
 
         $usuario=usuario::findorfail($id);
         $data = Request ()->all();
@@ -96,6 +108,11 @@ class jika extends Controller
 
     {
 
+/** 
+      *   @param : $id
+      *   @brief : Metodos utilizado para eliminar usuarios en la base de datos.
+        * @return :Vista donde nos mostrara todos lo usuarios.
+        */
       // Conseguimos el objeto
   $usuario=usuario::findorfail($id);
         $data = Request ()->all();

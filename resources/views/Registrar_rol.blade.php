@@ -23,10 +23,6 @@ Rol           </p>
               <input name="rol" type="text" id="rol">
             </label></td>
           </tr>
-          <tr> <br>
-            <td>Descripcion:</td>
-            <td><input name="descripcion" type="text" id="descripcion"></td>
-          </tr>
           <tr>
             <td colspan="2"><label> </label>
                 <div align="center">

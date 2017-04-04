@@ -1,3 +1,10 @@
+<?php/** @file : consultar_marca.blade.php
+* @brief : Permitira consultar todas las marcas, para editarlas o eliminarlas.
+* @author : Ivan Pacheco
+* @version : 1
+* @date : 28 marzo del 2017 
+*/
+?>
 @extends ('layout.master')
 @section ('content')
 <div id="Layer1" align="center">

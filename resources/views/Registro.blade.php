@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php/** @file : registro.blade.php
+* @brief :la vista que incluye el formulario para ingresar los registros.
+* @author : Ivan Pacheco
+* @version : 1
+* @date : 28 marzo del 2017 
+*/
+?><!DOCTYPE html>
 <html>
 <head>
   <title></title>

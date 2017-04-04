@@ -1,3 +1,10 @@
+<?php/** @file : consultar_tipo_dispositivo.blade.php
+* @brief : Permitira consultar todos los tipos de  dispositivos, para editarlos o eliminarlos.
+* @author : Ivan Pacheco
+* @version : 1
+* @date : 28 marzo del 2017 
+*/
+?>
 @extends ('layout.master')
 @section ('content')
 <div id="Layer1" align="center">

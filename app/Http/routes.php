@@ -1,5 +1,11 @@
 <?php
 
+/** @file : routes.php
+* @brief : todas las rutas necesarias para trabajar.
+* @author : Ivan Pacheco
+* @version : 1
+*/
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -112,7 +118,7 @@ Route::get('Registrar_Marca', function () {
     return view('Registrar_Marca');
 });
 
-Route::post('Registrar_Marca','marcaController@registrar_marca');
+Route::post('marca','marcaController@registrar_marca');
 
 
 Route::get('consultar_marca','marcaController@consultar_marca');
@@ -194,8 +200,8 @@ Route::get('marca', function () {
     return view('marca');
 });
 
-Route::get('tipo', function () {
-    return view('tipo');
+Route::get('tipo_dispositivo', function () {
+    return view('tipo_dispositivo');
 });
 
 Route::get('inicio', function () {
@@ -223,3 +229,11 @@ Route::get('prueba', function () {
 });*/
 Route::get('menu', ['uses' => 'pruebaController@index']);
 
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');

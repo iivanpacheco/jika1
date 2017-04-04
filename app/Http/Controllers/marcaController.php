@@ -1,4 +1,10 @@
 <?php
+/** @file : marcaController.php
+* @brief : Controller donde se llevaran acabo todos los metodos utilizados para la tabla de marca
+* @date : 25/03/2017
+* @author : Ivan Pacheco
+* @version : 1
+*/
 
 namespace App\Http\Controllers;
 
@@ -19,10 +25,10 @@ class marcaController extends Controller
     public function registrar_marca()
        
       {
-      $marca =Request()->get ('marca');
-        echo "el nombre del aprendiz es:--". $marca;
-         $descripcion =Request()->get ('descripcion');
-        echo "el nombre del aprendiz es:--". $descripcion; echo "<br/>";
+       /** 
+      *   @brief : Metodos para ingresar marca en la base de datos.
+        * @return :Vista donde nos mostrara todos lo marca.
+        */
         
           
        
@@ -33,6 +39,11 @@ class marcaController extends Controller
 
     
      public function consultar_marca()
+
+        /** 
+      *   @brief : Metodos para consultar todas las  marca en la base de datos.
+        * @return :Vista donde nos mostrara todas las marca.
+        */
     {
         $marca=marca::all();
         return view ('consultar_marca',compact('marca'));
@@ -69,13 +80,24 @@ class marcaController extends Controller
 
     }*/
 
-    public function editar14($id){
+    public function editar14($id){  
+         /** 
+      *   @param : $id
+      *   @brief : Metodos para editar la marca en la base de datos.
+        * @return :Vista donde nos mostrara un formulario con todos los datos de la marca a editar.
+        */
+
 
         $marca=marca::findorfail($id);
         return view ('Actualizar_marca',compact('marca'));
     }
 
     public function actualizar($id){
+        /** 
+      *   @param : $id
+      *   @brief : Metodos utilizado para actualizar marca en la base de datos.
+        * @return :Vista donde nos mostrara todos lo marca.
+        */
 
         $marca=marca::findorfail($id);
         $data = Request ()->all();
@@ -86,6 +108,11 @@ class marcaController extends Controller
     public function eliminar14($id)
 
     {
+        /** 
+      *   @param : $id
+      *   @brief : Metodos utilizado para eliminar marca en la base de datos.
+        * @return :Vista donde nos mostrara todas las marca.
+        */
 
       // Conseguimos el objeto
     $marca=marca::findorfail($id);

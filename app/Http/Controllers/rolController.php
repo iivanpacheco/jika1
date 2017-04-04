@@ -1,4 +1,10 @@
 <?php
+ /** @file : rolController.php
+* @brief : Controller donde se llevaran acabo todos los metodos utilizados para la tabla de rol
+* @date : 25/03/2017
+* @author : Ivan Pacheco
+* @version : 1
+*/
 
 namespace App\Http\Controllers;
 
@@ -18,11 +24,10 @@ class rolController extends Controller
      public function registrar_rol()
        
       {
-      $rol =Request()->get ('rol');
-        echo "El rol seleccionado fue:--". $rol; echo "<br/>";
-         $descripcion =Request()->get ('descripcion');
-        echo "Su descripcion fue:--". $descripcion; echo "<br/>";
-        
+       /** 
+      *   @brief : Metodos para ingresar rol en la base de datos.
+        * @return :Vista donde nos mostrara todos lo rol.
+        */
           
        
         $data =Request()->all();
@@ -32,6 +37,11 @@ class rolController extends Controller
 
     
      public function consultar_rol()
+
+        /** 
+      *   @brief : Metodos para consultar todos los  rol en la base de datos.
+        * @return :Vista donde nos mostrara todos lo rol.
+        */
     {
         $rol=rol::all();
         return view ('consultar_rol',compact('rol'));
@@ -69,12 +79,23 @@ class rolController extends Controller
     }*/
 
     public function editar14($id){
+        /** 
+      *   @param : $id
+      *   @brief : Metodos para editar rol en la base de datos.
+        * @return :Vista donde nos mostrara un formulario con todos los datos del rol a editar.
+        */
+
 
         $rol=rol::findorfail($id);
         return view ('Actualizar_rol',compact('rol'));
     }
 
     public function actualizar($id){
+        /** 
+      *   @param : $id
+      *   @brief : Metodos utilizado para actualizar rol en la base de datos.
+        * @return :Vista donde nos mostrara todos lo rol.
+        */
 
         $rol=rol::findorfail($id);
         $data = Request ()->all();
@@ -85,6 +106,11 @@ class rolController extends Controller
     public function eliminar14($id)
 
     {
+        /** 
+      *   @param : $id
+      *   @brief : Metodos utilizado para eliminar rol en la base de datos.
+        * @return :Vista donde nos mostrara todos lo rol.
+        */
 
       // Conseguimos el objeto
     $rol=rol::findorfail($id);

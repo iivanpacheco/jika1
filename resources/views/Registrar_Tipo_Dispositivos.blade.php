@@ -14,8 +14,8 @@
     <td colspan="2"><div align="center">TIPO DE DISPOSITIVO</div></td>
   </tr>
   <tr>
-    <td>Descripcion:</td>
-    <td><input name="descripcion" type="text" id="descripcion" /></td>
+    <td>Tipo:</td>
+    <td><input name="tipo_dispositivo" type="text" id="tipo_dispositivo" /></td>
   </tr>
   <tr>
     <td>Tipo:</td>

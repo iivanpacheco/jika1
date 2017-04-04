@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php/** @file : Actualizar_registro.blade.php
+* @brief : Cotiene el formulario para actualizar  el registro.
+* @author : Ivan Pacheco
+* @version : 1
+* @date : 28 marzo del 2017 
+*/
+?><!DOCTYPE html>
 <html>
 <head>
   <title></title>

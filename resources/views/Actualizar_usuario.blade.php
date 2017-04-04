@@ -1,3 +1,10 @@
+<?php/** @file : Actualizar_usuario.blade.php
+* @brief : Cotiene el formulario para actualizar el usuario.
+* @author : Ivan Pacheco
+* @version : 1
+* @date : 28 marzo del 2017 
+*/
+?>
 <div id="Layer1" align="center"><!DOCTYPE html>
 <html>
 @extends('layout/master')

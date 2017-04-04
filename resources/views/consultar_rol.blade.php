@@ -1,3 +1,10 @@
+<?php/** @file : consultar_rol.blade.php
+* @brief : Permitira consultar todos los roles, para editarlos o eliminarlos.
+* @author : Ivan Pacheco
+* @version : 1
+* @date : 28 marzo del 2017 
+*/
+?>
 @extends ('layout.master')
 @section ('content')
 <div id="Layer1" align="center">

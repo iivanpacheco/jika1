@@ -1,5 +1,5 @@
-<?php/** @file : marca.blade.php
-* @brief : la vista que incluye el formulario para registrar las marcas.
+<?php/** @file : tipo_dispositivo.blade.php
+* @brief :la vista que incluye el formulario para registrar los tipos de  dispositivos.
 * @author : Ivan Pacheco
 * @version : 1
 * @date : 28 marzo del 2017 
@@ -8,7 +8,7 @@
 @extends('layout/master')
 @section('content')
 
- <body bgcolor="4A6591">
+<body bgcolor="4A6591">
  <table width="900" height="538" border="0" align="center" bordercolor="#4A6591">
   <tr>
     <td width="900" bgcolor="#4A6591"><form id="form1" name="form1" method="post" action="">
@@ -20,24 +20,17 @@
       <tr>
         <td width="516" height="361">
 
-
-     <form id="marca" name="marca" method="POST" action="{{url('marca')}}">
+  <td><div align="center">
+     <form id="tipo" name="tipo" method="POST" action="{{url('tipo')}}">
      {!! csrf_field() !!}
-        <h2>Marca</h2>  
-        <table width="251" border="0" bgcolor="#cccccc">
+        <h2>Tipo Dispositivo</h2>
+        <table width="516" border="0" bgcolor="#CCCCCC">
           <tr>
-            <td width="78">Marca:</td>
-            <td width="157"><label>
-              <input name="marca" type="text" id="marca">
-            </label></td>
-          </tr>
-          <tr>
-            <td colspan="2"><label> </label>
-                <div align="center">
-                  <input type="submit" name="Submit" value="Enviar">
-              </div></td>
+            <td width="164" height="24"><div align="center">Tipo Dispositivo:</div></td>
+            <td width="341"><input name="tipo_dispositivo" type="text" id="tipo_dispositivo" size="45" /></td>
           </tr>
         </table>
+        <input type="submit" name="Submit" value="Enviar">
     </form>
 
       </td>
