@@ -5,7 +5,7 @@
     </head>
     <body>
         @section('sidebar')
-        Usuarios
+     
         @show
 
         <div class="container">

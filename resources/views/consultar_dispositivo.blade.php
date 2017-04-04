@@ -1,20 +1,33 @@
 @extends ('layout.master')
 @section ('content')
 <ul>
+<body bgcolor="4A6591">
+<table width="200" border="1">
+  <tr bgcolor="ccccc">
+    <td width="150">id  </td>
+    <td width="100">serial</td>
+    <td width="100">Descripcion</td>
+    <td width="100">codigo_barra</td>
+    <td width="150">fk_id_tipo_dispositivo</td>
+    <td width="100">fk_id_marca</td>
+    <td width="100">Opciones</td>
+    
+  </tr>
+
 @foreach($dispositivos as $dis)
-<li>
-{{$dis->id}}
-{{$dis->serial}}
-{{$dis->descripcion}}
-{{$dis->codigo_barra}}
-{{$dis->fk_id_tipo_dispositivo}}
-{{$dis->correo}}
-{{$dis->fecha_nacimiento}}
-{{$dis->fk_id_marca}}
-<br>
-<a href ="{{url('editar', $dis->id)}}" >Editar dispositivo </a> <br>
-<a href ="{{url('eliminar', $dis->id)}}" >Eliminar dispositivo </a>
-</li>
+
+ <tr <tr bgcolor="ccccc">
+    <td>{{$dis->id}}</td>
+    <td>{{$dis->serial}}</td>
+    <td>{{$dis->descripcion}}</td>
+    <td>{{$dis->codigo_barra}}</td>
+    <td>{{$dis->fk_id_tipo_dispositivo}}</td>
+
+    <td>{{$dis->fk_id_marca}}</td>
+    <td><a href ="{{url('editar', $dis->id)}}" >Editar dispositivo </a> <br>
+<a href ="{{url('eliminar', $dis->id)}}" >Eliminar dispositivo </td>
+       </tr>
+<ul>
 @endforeach
 </ul>
 @endsection

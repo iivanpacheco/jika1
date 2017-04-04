@@ -44,7 +44,7 @@
   </tr>
   <tr>
     <td>Fecha de Nacimiento: </td>
-    <td><input name="fecha_nacimiento" type="text" id="fecha_nacimiento" /></td>
+    <td><input name="fecha_nacimiento" type="date" id="fecha_nacimiento" /></td>
   </tr>
   <tr>
     <td>Rol:</td>

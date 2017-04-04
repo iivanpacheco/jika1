@@ -6,35 +6,35 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\rol;
+use App\tipo_dispositivo;
 
-class rolController extends Controller
+class tipo_dispositivoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-     public function registrar_rol()
+    public function registrar_tipo_dispositivos()
        
       {
-      $rol =Request()->get ('rol');
-        echo "El rol seleccionado fue:--". $rol; echo "<br/>";
+      $tipo_dispositivo =Request()->get ('tipo_dispositivo');
+        echo "el nombre del aprendiz es:--". $tipo_dispositivo; echo "<br/>";
          $descripcion =Request()->get ('descripcion');
-        echo "Su descripcion fue:--". $descripcion; echo "<br/>";
+        echo "el nombre del aprendiz es:--". $descripcion; echo "<br/>";
         
           
        
         $data =Request()->all();
-        rol::create($data);
+        tipo_dispositivo::create($data);
 
     }    
 
     
-     public function consultar_rol()
+     public function consultar_tipo_dispositivos()
     {
-        $rol=rol::all();
-        return view ('consultar_rol',compact('rol'));
+        $tipo_dispositivo=tipo_dispositivo::all();
+        return view ('consultar_tipo_dispositivo',compact('tipo_dispositivo'));
     }
  /* public function editar($id,$titulo,$idioma)
 
@@ -70,16 +70,16 @@ class rolController extends Controller
 
     public function editar14($id){
 
-        $rol=rol::findorfail($id);
-        return view ('Actualizar_rol',compact('rol'));
+        $tipo_dispositivo=tipo_dispositivo::findorfail($id);
+        return view ('Actualizar_tipo_dispositivo',compact('tipo_dispositivo'));
     }
 
     public function actualizar($id){
 
-        $rol=rol::findorfail($id);
+        $tipo_dispositivo=tipo_dispositivo::findorfail($id);
         $data = Request ()->all();
-        $rol->fill ($data)->save();
-        return redirect ()->to ('consultar_rol');
+        $tipo_dispositivo->fill ($data)->save();
+        return redirect ()->to ('consultar_tipo_dispositivo');
     }
 
     public function eliminar14($id)
@@ -87,8 +87,9 @@ class rolController extends Controller
     {
 
       // Conseguimos el objeto
-    $rol=rol::findorfail($id)->first();
-         $rol->delete();
+    $tipo_dispositivo=tipo_dispositivo::findorfail($id)->first();
+    $tipo_dispositivo->delete();
 
     }
+
 }

@@ -1,0 +1,28 @@
+.menu
+{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#FFFFFF;
+background:#FF0000;
+}
+.menu:hover
+{
+background:#CC0000;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#000000;
+}
+.inicio
+{
+background:#FF0000;
+color:#FFFFFF;
+font-family:Geneva, Arial, Helvetica, sans-serif;
+}
+.Sesion
+{
+color:#FFFFFF;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.Banner
+{
+color:#FFFFFF;
+font-family:Arial, Helvetica, sans-serif;
+}
